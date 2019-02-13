@@ -9,4 +9,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from person where id = #{id} 
 	</select>
 	
+	<insert id="addPerson" parameterType="com.tengli.entity.Person" >
+		insert into person(id,name,age) values(#{id},#{name},#{age}) 
+	</insert>
+	
+	
+	<delete id="deletePesonById"  parameterType="int">
+		delete from person where id = #{id} 
+	</delete>
+	
+	<update id="updatePesonById" parameterType="com.tengli.entity.Person" >
+		update person set name=#{name},age=#{age} where id=#{id}
+	</update>
+	
+	<select id="queryAllPeson"  resultType="com.tengli.entity.Person" >
+		select * from person 
+	</select>
 </mapper>
