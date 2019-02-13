@@ -5,6 +5,10 @@ public class Person {
 	private String name;
 	private int age;
 	
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+
 	public Person() {
 	}
 	
